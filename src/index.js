@@ -5,11 +5,24 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 const name = "DEVersity";
+const img = "https://picsum.photos/200?grayscale";
 
 root.render(
-  <div>
+  <div spellCheck="false">
+    <h1>Stuff {name} Likes</h1>
+    <div className="lg-thumbnail">
+      <img
+        src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/chris-ried-ieic5Tq8YMk-unsplash.jpg"
+        alt=""
+      />
+      <img
+        src="https://www.legendsoflearning.com/wp-content/uploads/2020/10/benefits-of-online-learning-graphic.png"
+        alt=""
+      />
+      <img src={img} alt="" />
+    </div>
     <p>Created by {name}</p>
-    <p>Copyright {getYear()}</p>
+    <p className="copyright">Copyright {getYear()}</p>
   </div>
 );
 

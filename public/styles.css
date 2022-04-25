@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  color: red;
+}
+
+.copyright {
+  font-style: italic;
+  font-weight: 400;
+}
+.lg-thumbnail > img {
+  height: 100px;
+  width: 100px;
+}
