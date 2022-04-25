@@ -6,10 +6,16 @@ const root = createRoot(rootElement);
 
 const name = "DEVersity";
 const img = "https://picsum.photos/200?grayscale";
+const headerStyle = {
+  color: "red",
+  textAlign: "center"
+};
 
 root.render(
   <div spellCheck="false">
-    <h1>Stuff {name} Likes</h1>
+    <h1 onClick={changeHeaderColor()} style={headerStyle}>
+      Stuff {name} Likes
+    </h1>
     <div className="lg-thumbnail">
       <img
         src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/chris-ried-ieic5Tq8YMk-unsplash.jpg"
@@ -29,4 +35,9 @@ root.render(
 function getYear() {
   let year = new Date().getFullYear();
   return year;
+}
+
+function changeHeaderColor() {
+  console.log("I was clicked");
+  headerStyle.color = "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
